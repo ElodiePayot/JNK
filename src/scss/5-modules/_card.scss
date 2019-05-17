@@ -1,0 +1,30 @@
+.about--card {
+  background-color: transparent;
+  border: 0;
+  padding: 0rem 0.25rem;
+  @include transition(0.3s);
+  &:hover {
+    background-color: white;
+    @include border-radius(16px);
+    @include transition(0.3s);
+  }
+  .card-body {padding: 1rem 0.75rem 0.75rem 0.75rem;}
+  .about--card__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 30px;
+      width: auto;
+    }
+  }
+  .about--card__subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+  .card-text {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,38 @@
+
+
+
+//colors
+$primary: #FBDE46;
+$secondary: #508BFC;
+$secondary-dark: #024F65;
+$green: #34A853;
+$red: #FF4545;
+$input-btn-focus-box-shadow: none;
+$text-color: #000000;
+$text-color-2: #A5A5A5;
+$light-beige: #F5F4F0;
+
+//font-families
+$font-family-sans-serif: "Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-slab: 'Roboto Slab', serif;
+
+//font-size
+$font-size-base: 1.375rem;
+$font-size-lg: 2rem;
+$font-size-sm: 1rem;
+$font-size-smaller: 0.875rem;
+
+$h1-font-size: 2.25rem;
+$h2-font-size: 3.25rem;
+$h3-font-size: 1.6rem;
+$h4-font-size: 1.6rem;
+$h5-font-size: 1.25rem;
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1300px
+);

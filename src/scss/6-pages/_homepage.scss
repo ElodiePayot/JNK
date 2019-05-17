@@ -1,0 +1,111 @@
+.section--heading {
+  padding: 50px 0;
+  @include media-breakpoint-down(sm) {padding: 20px 0;}
+  .container {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      left: 0;
+      right: 0;
+      bottom: -45%;
+      height: 80px;
+      @include border-radius(16px);
+    }
+    .h1__subtitle--mobile {
+      @include media-breakpoint-up(sm) {display: none;}
+      color: $secondary;
+      font-size: 0.8rem;
+    }
+    .h1__icon {
+      display: inline;
+      margin: 0 0rem 0.8rem 1.5rem;
+    }
+    .h1__subtitle {
+      color: $text-color-2;
+      font-size: 1.8rem;
+      font-family: $font-family-monospace;
+      text-transform: uppercase;
+      font-weight: 300;
+      line-height: 1;
+      @include media-breakpoint-down(sm) {font-size: 1.6rem;}
+    }
+    .section--heading__p {
+      font-size: 1.8rem;
+      padding: 2rem 0;
+      letter-spacing: 0.3px;
+      font-family: $font-family-slab;
+      @include media-breakpoint-down(sm) {font-size: 1.2rem;}
+    }
+    .section--heading__link {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      padding: 0.5rem 1rem;
+      color: $text-color-2;
+      margin-top: 50px;
+      font-size: $font-size-sm;
+      @include transition(0.4s);
+      &:hover {
+        background-color: $gray-200;
+        color: $secondary;
+        text-decoration: none;
+        @include transition(0.4s);
+        @include border-radius(16px);
+      }
+      @include media-breakpoint-down(sm) {
+        right: 10%;
+        left: 10%;
+        bottom: -17%;
+        margin: auto;
+        text-align: center;
+      }
+    }
+    .row {
+      &.row--2 {
+        padding-top: 2rem;
+        @include media-breakpoint-down(sm) {padding-top: 0.5rem;}
+        p {
+          padding-left: 0.25rem;
+          @include media-breakpoint-down(sm) {padding-left: 0.4rem;}
+        }
+      }
+      img {
+        @include media-breakpoint-down(sm) {width: 18px;}
+      }
+      p, a {
+        padding-left: 1rem;
+        @include media-breakpoint-down(sm) {
+          font-size: 1rem;
+          padding-left: 0.75rem;
+        }
+      }
+      p {
+        color: $text-color-2;
+        display: inline;
+      }
+      a {
+        color: $secondary;
+        @include transition(0.4s);
+        &:hover {
+          text-decoration: none;
+          color: $primary;
+          @include transition(0.4s);
+        }
+      }
+    }
+  }
+}
+
+.section--about {
+  background-color: $primary;
+  margin-top: 100px;
+  padding: 150px 0 50px;
+  .section--about__col--left {
+    display: flex;
+    align-items: center;
+    padding: 0 5rem 0 0;
+    p {line-height: 2.3rem;}
+  }
+}
