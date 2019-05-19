@@ -1,11 +1,16 @@
 <!-- @@include includes/header.html -->
 
 <main>
-  <section class="section--heading">
+  <section class="section--heading section__after">
     <div class="container">
       <p class="h1__subtitle--mobile">👋 Hello Mobile’s user</p>
       <h1>KINDERMANS JONATHAN</h1>
-      <img src="img/JNK_checked.svg" alt="identity checked" class="h1__icon"/>
+      <div class="h1__icon" id="h1Icon">
+        <img src="img/JNK_checked.svg" alt="identity checked"/>
+        <div class="h1___icon--hover" id="h1IconHover">
+          <span>Certified by myself</span>
+        </div>
+      </div>
       <h2 class="h1__subtitle">@JNK089</h2>
       <p class="section--heading__p">
         Self taught <span class="text-secondary">D</span><span class="text-green">e</span><span class="text-primary">s</span><span class="text-red">i</span><span class="text-secondary">g</span><span class="text-green">n</span><span class="text-primary">e</span><span class="text-red">r</span> with an untreatable impostor syndrome.<br />
@@ -20,7 +25,7 @@
         </div>
         <div class="col col-lg-3 col-6">
           <img src="img/JNK_link.svg" alt="link" />
-          <a href="" id="dontCounter">Just don't</a>
+          <a id="restartConfetti">Just don't</a>
         </div>
       </div>
       <div class="row row--2">
@@ -29,21 +34,21 @@
           <p>Join the world wild web in 1989</p>
         </div>
       </div>
-      <a href="" class="section--heading__link">No time to read ? Jump to projects !</a>
+      <a href="" class="JNK__link">No time to read ? Jump to projects !</a>
     </div>
   </section>
 
-  <section class="section--about">
+  <section class="section--about section__after">
     <div class="container">
       <h2>More...<br />about me</h2>
       <div class="row">
-        <div class="col-md-4 section--about__col--left">
+        <div class="col-lg-4 section--about__col--left">
           <p>
             Designer & UI/UX with <span class="font-weight-bold">more than 5 years</span> and 8 month and a few days of experience. 🎉 I have worked with companies, startups and agencies to <span class="font-weight-bold">solve problems</span> using design solutions centered around the user. <span class="font-weight-bold">Always Exploring.</span>
           </p>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-lg-8">
 
           <div class="card about--card">
             <div class="row no-gutters">
@@ -104,12 +109,69 @@
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
   </section>
+
+  <section class="section--projects section__after">
+    <div class="container">
+
+      <div class="row img-right">
+        <div class="col-md-4">
+          <a href="" class="card project--card">
+            <div class="card-body">
+              <h3 class="card-title">Redspher Mobile Application</h3>
+              <p class="card-text">An App to make <span class="font-weight-bold">Premium freight orders</span> available everywhere.</p>
+              <span class="JNK__link --blue-link">More informations</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card__bg-color --blue --redspher">
+          </div>
+        </div>
+      </div>
+
+      <div class="row img-left">
+        <div class="col-md-8">
+          <div class="card__bg-color --green --yoctu">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <a href="" class="card project--card">
+            <div class="card-body">
+              <h3 class="card-title">Yoctu<br />Website</h3>
+              <p class="card-text">A tool box to kick start and <span class="font-weight-bold">facilitate</span> application development.</p>
+              <span class="JNK__link --green-link">More informations</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row img-right">
+        <div class="col-md-4">
+          <a href="" class="card project--card">
+            <div class="card-body">
+              <h3 class="card-title">Illustration</h3>
+              <p class="card-text">More than a work. A <span class="font-weight-bold">passion</span>.</p>
+              <span class="JNK__link --red-link">More informations</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card__bg-color --red --illustration">
+          </div>
+        </div>
+      </div>
+
+      <div class="text-align-center">
+        <a href="" class="JNK__link">More projects ?</a>
+      </div>
+    </div>
+  </section>
+
+
 </main>
 
 <!-- @@include includes/footer.html -->

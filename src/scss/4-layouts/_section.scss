@@ -1,0 +1,20 @@
+.section__after {
+  .container {
+    position: relative;
+    z-index: 1;
+    &:after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      background-color: white;
+      left: 0;
+      right: 0;
+      height: 80px;
+      @include border-radius(16px);
+      @include media-breakpoint-down(sm) {
+        left: 5%;
+        right: 5%;
+      }
+    }
+  }
+}

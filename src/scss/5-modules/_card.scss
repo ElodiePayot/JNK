@@ -1,7 +1,7 @@
 .about--card {
   background-color: transparent;
   border: 0;
-  padding: 0rem 0.25rem;
+  padding: 0.25rem;
   @include transition(0.3s);
   &:hover {
     background-color: white;
@@ -18,13 +18,69 @@
       width: auto;
     }
   }
+  .card-title {margin: 0;}
   .about--card__subtitle {
     font-size: 1rem;
     font-weight: 300;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
   }
   .card-text {
     font-size: 1rem;
     margin-top: 0.5rem;
+  }
+}
+
+.project--card {
+  border: 0;
+  background-color: #F6F6F6;
+  @include border-radius(16px);
+  height: 465px;
+  position: relative;
+  padding: 1rem 2rem 1rem 1rem;
+  color: $text-color;
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+    .JNK__link {
+      @include transition(0.4s);
+      @include border-radius(16px);
+      color: white;
+      &.--blue-link {background-color: $secondary;}
+      &.--green-link {background-color: $green;}
+      &.--red-link {background-color: $red;}
+    }
+  }
+  .JNK__link {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+.card__bg-color {
+  @include border-radius(16px);
+  position: relative;
+  width: 95%;
+  height: 445px;
+  &:after {
+    content: "";
+    position: absolute;
+    left: -3%;
+    right: -3%;
+    bottom: -3%;
+    top: -3%;
+    background-size: cover;
+  }
+  &.--blue {background-color: $secondary;}
+  &.--green {background-color: $green;}
+  &.--red {background-color: $red;}
+  &.--redspher {
+    &:after {background-image: url('../img/JNK_mobileapp.png');}
+  }
+  &.--yoctu {
+    &:after {background-image: url('../img/JNK_yoctu.png');}
+  }
+  &.--illustration {
+    &:after {background-image: url('../img/JNK_illustration.png');}
   }
 }

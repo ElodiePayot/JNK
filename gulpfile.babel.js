@@ -57,6 +57,10 @@ export function copyFonts() {
   .pipe(gulp.dest('build/fonts'))
 }
 
+export function copyJQ() {
+  return gulp.src('node_modules/jquery/dist/jquery.min.js')
+  .pipe(gulp.dest('build/js'))
+}
 
 //minify img
 export function imgSquash() {
@@ -67,7 +71,7 @@ export function imgSquash() {
 
 
 export function build(done) {
-  return gulp.series('styles','script','includes','copyFonts', 'imgSquash')(done);
+  return gulp.series('styles','script','includes','copyFonts', 'imgSquash', 'copyJQ')(done);
 }
 
 
