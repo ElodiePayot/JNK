@@ -1,0 +1,49 @@
+.blue-calendar {fill: $secondary !important;}
+
+.project-redspher__heading {
+  .container {
+    &:after {
+      bottom: -14%;
+      @include media-breakpoint-down(lg) {bottom: -15%;}
+      @include media-breakpoint-down(md) {bottom: -16%;}
+      @include media-breakpoint-down(sm) {bottom: -12%;}
+    }
+    .row {
+      padding: 2rem 0;
+      p, img {display: inline;}
+      p {
+        color: $secondary;
+        font-size: 1rem;
+        padding-left: 0.75rem;
+      }
+    }
+  }
+}
+
+.project-redspher__section1 {
+  background-color: $secondary;
+  padding: 120px 0;
+  @include media-breakpoint-down(lg) {padding: 100px 0;}
+  .container {
+    &:after {
+      bottom: -62%;
+      @include media-breakpoint-down(lg) {bottom: -43%;}
+      @include media-breakpoint-down(md) {bottom: -33%;}
+      @include media-breakpoint-down(sm) {bottom: -43%;}
+    }
+    .row {
+      p {color: white;}
+      .col-md-6 {
+        position: relative;
+        .project-redspher__section1--img {
+          position: absolute;
+          z-index: -1;
+          bottom: -160px;
+          @include media-breakpoint-down(lg) {bottom: -158px;}
+          @include media-breakpoint-down(md) {bottom: -124px;}
+          @include media-breakpoint-down(sm) {display: none;}
+        }
+      }
+    }
+  }
+}
