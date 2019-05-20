@@ -1,15 +1,20 @@
 .blue-calendar {fill: $secondary !important;}
 
+.home-link {
+  color: $secondary;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 5rem;
+}
+
 .project-redspher__heading {
   .container {
     &:after {
-      bottom: -14%;
-      @include media-breakpoint-down(lg) {bottom: -15%;}
-      @include media-breakpoint-down(md) {bottom: -16%;}
-      @include media-breakpoint-down(sm) {bottom: -12%;}
+      bottom: -11%;
+      @include media-breakpoint-down(sm) {bottom: -7%;}
     }
     .row {
-      padding: 2rem 0;
+      padding: 3rem 0 2rem;
       p, img {display: inline;}
       p {
         color: $secondary;
@@ -22,28 +27,72 @@
 
 .project-redspher__section1 {
   background-color: $secondary;
-  padding: 120px 0;
-  @include media-breakpoint-down(lg) {padding: 100px 0;}
+  padding: 150px 0;
   .container {
     &:after {
-      bottom: -62%;
-      @include media-breakpoint-down(lg) {bottom: -43%;}
-      @include media-breakpoint-down(md) {bottom: -33%;}
-      @include media-breakpoint-down(sm) {bottom: -43%;}
+      bottom: -70%;
+      @include media-breakpoint-down(lg) {bottom: -57%;}
+      @include media-breakpoint-down(md) {bottom: -43%;}
+      @include media-breakpoint-down(sm) {bottom: -59%;}
     }
     .row {
       p {color: white;}
       .col-md-6 {
         position: relative;
+        &:first-child {
+          @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
         .project-redspher__section1--img {
           position: absolute;
           z-index: -1;
           bottom: -160px;
           @include media-breakpoint-down(lg) {bottom: -158px;}
-          @include media-breakpoint-down(md) {bottom: -124px;}
+          @include media-breakpoint-down(md) {bottom: -150px;}
           @include media-breakpoint-down(sm) {display: none;}
         }
       }
     }
   }
+}
+
+.project-redspher__section2 {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  .container {
+    &:after {
+      bottom: -7%;
+      @include media-breakpoint-down(sm) {bottom: -4%;}
+    }
+    .row {
+      .col-md-6 {
+        &:first-child {
+          text-align: center;
+          .project-redspher__section2--img {height: 650px;}
+         }
+        &:last-child {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 2rem 5rem 0 2rem;
+          @include media-breakpoint-down(md) {padding: 2rem;}
+        }
+      }
+      p {
+        color: #6D6D6D;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+blockquote {
+  color: #6D6D6D;
+  font-size: 1.5rem;
+  font-style: italic;
+  padding: 2rem 0;
 }
