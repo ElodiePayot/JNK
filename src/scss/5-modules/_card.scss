@@ -35,9 +35,12 @@
   background-color: #F6F6F6;
   @include border-radius(16px);
   height: 465px;
+  width: 390px;
   position: relative;
   padding: 1rem 2rem 1rem 1rem;
   color: $text-color;
+  @include media-breakpoint-down(lg) {width: 360px;}
+  @include media-breakpoint-down(sm) {width: auto;}  
   &:hover {
     text-decoration: none;
     color: $text-color;
@@ -45,9 +48,10 @@
       @include transition(0.4s);
       @include border-radius(16px);
       color: white;
-      &.--blue-link {background-color: $secondary;}
-      &.--green-link {background-color: $green;}
-      &.--red-link {background-color: $red;}
+      &:nth-child(4n-3) {background-color: $secondary;}
+      &:nth-child(4n-2) {background-color: $green;}
+      &:nth-child(4n-1) {background-color: $red;}
+      &:nth-child(4n) {background-color: $primary;}
     }
   }
   .JNK__link {
@@ -71,9 +75,6 @@
     top: -3%;
     background-size: cover;
   }
-  &.--blue {background-color: $secondary;}
-  &.--green {background-color: $green;}
-  &.--red {background-color: $red;}
   &.--redspher {
     &:after {background-image: url('../img/JNK_mobileapp.png');}
   }

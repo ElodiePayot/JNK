@@ -149,6 +149,26 @@
   @include media-breakpoint-down(xs) {padding: 80px 0;}
   .container {
     .row {
+      &:nth-child(4n-3) {
+          .card__bg-color {
+          background-color: $secondary;
+        }
+      }
+      &:nth-child(4n-2) {
+        .card__bg-color {
+          background-color: $green;
+        }
+      }
+      &:nth-child(4n-1) {
+        .card__bg-color {
+          background-color: $red;
+        }
+      }
+      &:nth-child(4n) {
+        .card__bg-color {
+          background-color: $primary;
+        }
+      }
       padding-bottom: 2rem;
       height: 550px;
       .col-md-8 {
@@ -169,7 +189,7 @@
           position: absolute;
         }
       }
-        &.img-right {
+        &:nth-child(odd) {
         .col-md-8 {
           .card__bg-color {right: 8%;}
         }
@@ -177,7 +197,7 @@
           .project--card {left: 10%;}
         }
       }
-        &.img-left {
+        &:nth-child(even) {
         .col-md-8 {
           .card__bg-color {left: 8%;}
         }
@@ -196,7 +216,7 @@
             right: 1% !important;
           }
         }
-        &.img-right, &.img-left {
+        &:nth-child(odd), &:nth-child(even) {
           .col-md-8 {
             .card__bg-color {
               right: 0;
@@ -205,7 +225,7 @@
             }
           }
         }
-        &.img-right {
+        &:nth-child(odd) {
           .col-md-4 {
             order: 1;
             .project--card {left: 0;}
