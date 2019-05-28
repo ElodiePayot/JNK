@@ -40,7 +40,7 @@
   padding: 1rem 2rem 1rem 1rem;
   color: $text-color;
   @include media-breakpoint-down(lg) {width: 360px;}
-  @include media-breakpoint-down(sm) {width: auto;}  
+  @include media-breakpoint-down(sm) {width: auto;}
   &:hover {
     text-decoration: none;
     color: $text-color;
@@ -48,10 +48,6 @@
       @include transition(0.4s);
       @include border-radius(16px);
       color: white;
-      &:nth-child(4n-3) {background-color: $secondary;}
-      &:nth-child(4n-2) {background-color: $green;}
-      &:nth-child(4n-1) {background-color: $red;}
-      &:nth-child(4n) {background-color: $primary;}
     }
   }
   .JNK__link {
@@ -74,14 +70,5 @@
     bottom: -3%;
     top: -3%;
     background-size: cover;
-  }
-  &.--redspher {
-    &:after {background-image: url('../img/JNK_mobileapp.png');}
-  }
-  &.--yoctu {
-    &:after {background-image: url('../img/JNK_yoctu.png');}
-  }
-  &.--illustration {
-    &:after {background-image: url('../img/JNK_illustration.png');}
   }
 }

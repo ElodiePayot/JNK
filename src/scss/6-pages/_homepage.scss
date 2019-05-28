@@ -150,25 +150,61 @@
   .container {
     .row {
       &:nth-child(4n-3) {
+          .col-md-4 {
+            .project--card {
+                &:hover {
+                .JNK__link {background-color: $secondary;}
+              }
+            }
+          }
+        .col-md-8 {
           .card__bg-color {
-          background-color: $secondary;
+            background-color: $secondary;
+          }
         }
       }
       &:nth-child(4n-2) {
+        .col-md-4 {
+          .project--card {
+              &:hover {
+              .JNK__link {background-color: $green;}
+            }
+          }
+        }
+      .col-md-8 {
         .card__bg-color {
           background-color: $green;
         }
       }
+    }
       &:nth-child(4n-1) {
+        .col-md-4 {
+          .project--card {
+              &:hover {
+              .JNK__link {background-color: $red;}
+            }
+          }
+        }
+      .col-md-8 {
         .card__bg-color {
           background-color: $red;
         }
       }
+    }
       &:nth-child(4n) {
+        .col-md-4 {
+          .project--card {
+              &:hover {
+              .JNK__link {background-color: $primary;}
+            }
+          }
+        }
+      .col-md-8 {
         .card__bg-color {
           background-color: $primary;
         }
       }
+    }
       padding-bottom: 2rem;
       height: 550px;
       .col-md-8 {
@@ -199,9 +235,11 @@
       }
         &:nth-child(even) {
         .col-md-8 {
+          order: 1;
           .card__bg-color {left: 8%;}
         }
         .col-md-4 {
+          order: 2;
           .project--card {right: 10%;}
         }
       }
