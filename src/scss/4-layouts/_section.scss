@@ -1,20 +1,26 @@
 .section__after {
-  .container {
-    position: relative;
-    z-index: 1;
-    &:after {
-      content: "";
-      z-index: -1;
-      position: absolute;
-      background-color: white;
-      left: 0;
-      right: 0;
-      height: 80px;
-      @include border-radius(16px);
-      @include media-breakpoint-down(sm) {
-        left: 5%;
-        right: 5%;
-      }
+  position: relative;
+  z-index: 1;
+  &:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background-color: white;
+    bottom: -40px;
+    height: 80px;
+    margin: auto;
+    left: 15px;
+    right: 15px;
+    max-width: 1300px;
+    @include border-radius(16px);
+    @include media-breakpoint-down(lg){
+      max-width: 960px;
+    }
+    @include media-breakpoint-down(md){
+      max-width: 720px;
+    }
+    @include media-breakpoint-down(sm){
+      max-width: 540px;
     }
   }
 }
