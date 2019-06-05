@@ -1,3 +1,33 @@
+//nav button
+
+$(document).ready(function() {
+    $("#navbarBtn").click(function(){
+        $("#nav").toggleClass('show');
+    });
+});
+
+
+//calculate div height on project show page
+let projectGridHeight= $('#projectGrid').height();
+
+$('#projectSection1').height(projectGridHeight/2);
+$('#projectSection2').height(projectGridHeight/2);
+
+$(function(){
+
+    let projectGridHeight= $('#projectGrid').height();
+    $('#projectSection1').height(projectGridHeight/2);
+    $('#projectSection2').height(projectGridHeight/2);
+
+    $( window ).on("resize", function() {
+       projectGridHeight = $('#projectGrid').height();
+       $('#projectSection1').height(projectGridHeight/2);
+       $('#projectSection2').height(projectGridHeight/2);
+
+    });
+
+});
+
 
 // remove all .active classes when clicked anywhere
 hide = true;

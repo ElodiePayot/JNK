@@ -6,4 +6,34 @@
   }
 }
 
-.project-page__section1 {background-color: $primary;}
+.project-page_grid {
+  background-color: $primary;
+  padding: 50px 0;
+  .row-project-grid {
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    @media (min-width: 1200px) {
+      width: calc(100% - 106px);
+    }
+    @media (min-width: 1305px) {
+      width: calc(100% - 206px);
+    }
+    @include media-breakpoint-down(xl) {
+      width: calc(100% - 66px);
+    }
+    @media (max-width: 993px) {
+      width: calc(100% - 26px);
+    }
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+      width: 100%;
+    }
+    .project-grid-card {
+      @include media-breakpoint-up(md) {&:nth-child(2n-1) {margin-top: -100px;}}
+      &:nth-child(3n) {background-color: $red;}
+      &:nth-child(3n-1) {background-color: $green;}
+      &:nth-child(3n-2) {background-color: $secondary;}
+    }
+  }
+}

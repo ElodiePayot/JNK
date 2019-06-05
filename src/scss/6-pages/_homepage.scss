@@ -11,7 +11,8 @@
 .section--heading {
   padding: 50px 0 150px 0;
   z-index: 2;
-  @include media-breakpoint-down(sm) {padding: 20px 0;}
+  @include media-breakpoint-down(sm) {padding: 1.5rem 0 7rem;}
+  .container {position: relative;}
   .h1__subtitle--mobile {
     @include media-breakpoint-up(sm) {display: none;}
     color: $secondary;
@@ -69,14 +70,14 @@
     font-weight: 300;
     line-height: 1;
     margin-bottom: 0;
-    @include media-breakpoint-down(sm) {font-size: 1.6rem;}
+    @include media-breakpoint-down(sm) {font-size: 1.5rem;}
   }
   .section--heading__p {
     font-size: 1.8rem;
     padding: 2rem 0;
     letter-spacing: 0.3px;
     font-family: $font-family-slab;
-    @include media-breakpoint-down(sm) {font-size: 1.2rem;}
+    @include media-breakpoint-down(sm) {font-size: 1.5rem;}
   }
   .JNK__link {
     position: absolute;
@@ -87,7 +88,7 @@
     @include media-breakpoint-down(sm) {
       right: 10%;
       left: 10%;
-      bottom: -17%;
+      bottom: -100px;
       margin: auto;
       text-align: center;
     }
@@ -149,55 +150,51 @@
   @include media-breakpoint-down(xs) {padding: 80px 0;}
   .container {
     .row {
+      &:hover {
+        text-decoration: none;
+        color: $text-color;
+        .JNK__link {
+          @include transition(0.4s);
+          @include border-radius(16px);
+          color: white;
+        }
+      }
       &:nth-child(4n-3) {
-          .col-md-4 {
-            .project--card {
-                &:hover {
-                .JNK__link {background-color: $secondary;}
-              }
-            }
-          }
+          &:hover {
+          .JNK__link {background-color: $secondary;}
+        }
         .col-md-8 {
           .card__bg-color {
             background-color: $secondary;
+            //&:after {background-image: url('../img/JNK_mobileapp.png')}
           }
         }
       }
       &:nth-child(4n-2) {
-        .col-md-4 {
-          .project--card {
-              &:hover {
-              .JNK__link {background-color: $green;}
-            }
-          }
+        &:hover {
+        .JNK__link {background-color: $green;}
         }
       .col-md-8 {
         .card__bg-color {
           background-color: $green;
+          //&:after {background-image: url('../img/JNK_yoctu.png')}
         }
       }
     }
       &:nth-child(4n-1) {
-        .col-md-4 {
-          .project--card {
-              &:hover {
-              .JNK__link {background-color: $red;}
-            }
-          }
+        &:hover {
+        .JNK__link {background-color: $red;}
         }
       .col-md-8 {
         .card__bg-color {
           background-color: $red;
+          //&:after {background-image: url('../img/JNK_illustration.png')}
         }
       }
     }
       &:nth-child(4n) {
-        .col-md-4 {
-          .project--card {
-              &:hover {
-              .JNK__link {background-color: $primary;}
-            }
-          }
+        &:hover {
+        .JNK__link {background-color: $primary;}
         }
       .col-md-8 {
         .card__bg-color {

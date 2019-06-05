@@ -1,4 +1,39 @@
-.navbar {
-  padding-top: 50px;
+.nav-primary {
+  padding: 50px 0 0 0;
   @include media-breakpoint-down(sm) {padding-top: 20px;}
+  display: flex;
+  align-items: center;
+  .navbar-btn {
+    padding: 1.5rem -3rem 3rem 1.5rem;
+    button {
+    border: 0;
+    background-color: none;
+    &:focus {outline: 0;}
+    }
+  }
+  .nav {
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 1rem;
+    &.show {
+      .nav-item {
+        .nav-link {
+          @include transition(0.4s);
+          display: block !important;
+        }
+      }
+    }
+    .nav-link {
+      display: none;
+      padding: 0.5rem 1.5rem;
+      color: $secondary;
+      font-family: $font-family-slab;
+      @include transition(0.1s);
+      &:hover {
+        font-weight: 600;
+        @include transition(0.1s);
+      }
+      @include media-breakpoint-down(sm) {font-size: 1.2rem;}
+    }
+  }
 }

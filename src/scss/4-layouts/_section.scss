@@ -24,3 +24,28 @@
     }
   }
 }
+
+.section__before {
+  &:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background-color: white;
+    top: -40px;
+    height: 80px;
+    margin: auto;
+    left: 15px;
+    right: 15px;
+    max-width: 1300px;
+    @include border-radius(16px);
+    @include media-breakpoint-down(lg){
+      max-width: 960px;
+    }
+    @include media-breakpoint-down(md){
+      max-width: 720px;
+    }
+    @include media-breakpoint-down(sm){
+      max-width: 540px;
+    }
+  }
+}

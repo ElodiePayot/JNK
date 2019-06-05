@@ -41,15 +41,6 @@
   color: $text-color;
   @include media-breakpoint-down(lg) {width: 360px;}
   @include media-breakpoint-down(sm) {width: auto;}
-  &:hover {
-    text-decoration: none;
-    color: $text-color;
-    .JNK__link {
-      @include transition(0.4s);
-      @include border-radius(16px);
-      color: white;
-    }
-  }
   .JNK__link {
     position: absolute;
     bottom: 1rem;
@@ -71,4 +62,25 @@
     top: -3%;
     background-size: cover;
   }
+}
+
+
+.project-grid-card {
+  @include media-breakpoint-down(lg) {
+    height: 400px;
+    width: 400px;
+  }
+  @include media-breakpoint-down(md) {
+    height: 300px;
+    width: 300px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 350px;
+    width: 350px;
+  }
+  height: 500px;
+  width: 500px;
+  margin: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
